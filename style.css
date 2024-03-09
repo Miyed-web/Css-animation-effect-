@@ -1,0 +1,92 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #001010;
+}
+.container{
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .ring{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid #db0000;
+  margin: -30px;
+  animation: animate 4s linear infinite;
+  filter: drop-shadow(0 0 10px #db0000) drop-shadow(0 0 30px #db0000) drop-shadow(0 0 50px #db0000);
+}
+@keyframes animate{
+  0%{
+    transform: rotate(0deg);
+  }
+    100%{
+    transform: rotate(360deg);
+  }
+}
+ .ring::before{
+  position: absolute;
+  content: "♥️";
+  top: 10px;
+  right: -4px;
+  color: #fff;
+  font-size: 1.8em;
+  transform: rotate(140deg);
+}
+.ring:nth-child(2){
+  border: 4px solid transparent;
+  border-left: 4px solid #d6f72a;
+  margin: -30px;
+  animation: animate2 4s linear infinite;
+  animation-delay: -1s;
+  filter: drop-shadow(0 0 10px #d6f72a) drop-shadow(0 0 40px #d6f72a) drop-shadow(0 0 80px #d6f72a);
+}
+@keyframes animate2{
+  0%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+.ring:nth-child(2)::before{
+  position: absolute;
+  content:"🖕";
+  transform: rotate(130deg);
+  bottom: -6px;
+  left: 12px;
+  top: initial;
+  right: initial;
+}
+.ring:nth-child(3){
+  position: absolute;
+  top: -66.6px;
+  border: 4px solid transparent;
+  border-left: 4px solid #0045e0;
+  margin: -30px;
+  animation: animate2 4s linear infinite;
+  animation-delay: -3.1s;
+  filter: drop-shadow(0 0 10px #0045e0) drop-shadow(0 0 30px #0045e0) drop-shadow(0 0 50px #0045e0);
+}
+.ring:nth-child(3)::before{
+  position: absolute;
+  content: '🔥';
+  transform: rotate(130deg);
+  left: 12px;
+  bottom: -6px;
+  top: initial;
+  right: initial;
+}
